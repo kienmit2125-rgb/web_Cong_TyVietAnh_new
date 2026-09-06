@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dashboard - Nhân viên bán hàng</title>
+
+  <!-- Font Awesome 6 (Free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="employee-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar-brand">
+
+      <div class="sidebar-logo">
+        <img src="assets1/logo.png" alt="Việt Anh Company">
+      </div>
+
+      <div>
+        <strong>VIỆT ANH</strong>
+        <span>Quản lý xe công trình</span>
+      </div>
+
+    </div>
+
+
+    <div class="employee-profile">
+
+      <div class="avatar">
+        BH
+      </div>
+
+      <div>
+        <strong>Hoàng Xuân Kiên</strong>
+        <span>Nhân viên bán hàng</span>
+      </div>
+
+    </div>
+
+
+    <nav class="sidebar-nav">
+
+      <p class="nav-title">QUẢN LÝ</p>
+
+      <button class="nav-item active" data-section="overview">
+        <i class="fas fa-th-large"></i>  <!-- Thay ▦ -->
+        Tổng quan
+      </button>
+
+      <button class="nav-item" data-section="registrations">
+        <i class="fas fa-clipboard-list"></i>  <!-- Thay 📋 -->
+        Đơn đăng ký
+        <b class="notification-badge">5</b>
+      </button>
+
+      <button class="nav-item" data-section="customers">
+        <i class="fas fa-users"></i>  <!-- Thay 👥 -->
+        Khách hàng
+      </button>
+
+      <button class="nav-item" data-section="vehicles">
+        <i class="fas fa-tractor"></i>  <!-- Thay 🚜 -->
+        Thông tin xe
+      </button>
+
+      <button class="nav-item" data-section="contracts">
+        <i class="fas fa-file-contract"></i>  <!-- Thay 📄 -->
+        Hợp đồng
+      </button>
+
+
+      <p class="nav-title">HỆ THỐNG</p>
+
+      <button class="nav-item" data-section="account">
+        <i class="fas fa-cog"></i>  <!-- Thay ⚙ -->
+        Tài khoản
+      </button>
+
+      <button class="nav-item logout-btn" id="logoutBtn">
+        <i class="fas fa-sign-out-alt"></i>  <!-- Thay ↪ -->
+        Đăng xuất
+      </button>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+      <small>Phiên bản Demo 1.0</small>
+    </div>
+
+  </aside>
+
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+
+      <div>
+        <button class="mobile-menu" id="mobileMenu">
+          <i class="fas fa-bars"></i>  <!-- Thay ☰ -->
+        </button>
+
+        <h1 id="pageTitle">Tổng quan</h1>
+
+        <p id="pageDescription">
+          Theo dõi tình hình đăng ký thuê xe và khách hàng.
+        </p>
+      </div>
+
+
+      <div class="topbar-right">
+
+        <button class="icon-button">
+          <i class="fas fa-bell"></i>  <!-- Thay 🔔 -->
+          <span class="dot"></span>
+        </button>
+
+        <div class="top-user">
+
+          <div class="avatar small">
+            BH
+          </div>
+
+          <div>
+            <strong>Hoàng Xuân Kiên</strong>
+            <span>Nhân viên bán hàng</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <!-- CONTENT -->
+    <div class="content">
+
+
+      <!-- ================= OVERVIEW ================= -->
+
+      <section class="page-section active" id="overview">
+
+        <div class="welcome-card">
+
+          <div>
+            <span class="eyebrow">CHÀO MỪNG TRỞ LẠI</span>
+
+          <h2>
+            Xin chào, Hoàng Xuân Kiên
+            <i class="fas fa-hand-wave"></i>
+          </h2>
+
+            <p>
+              Đây là khu vực quản lý dành cho nhân viên bán hàng.
+            </p>
+          </div>
+
+          <div class="welcome-icon">
+            <i class="fas fa-truck"></i>
+          </div>
+
+        </div>
+
+
+        <div class="stats-grid">
+
+          <div class="stat-card">
+
+            <div class="stat-icon green">
+              <i class="fas fa-clipboard-list"></i>  <!-- Thay 📋 -->
+            </div>
+
+            <div>
+              <span>Đơn đăng ký mới</span>
+              <strong>08</strong>
+              <small>+3 hôm nay</small>
+            </div>
+
+          </div>
+
+
+          <div class="stat-card">
+
+            <div class="stat-icon yellow">
+              <i class="fas fa-hourglass-half"></i>  <!-- Thay ⏳ -->
+            </div>
+
+            <div>
+              <span>Chờ xử lý</span>
+              <strong>05</strong>
+              <small>Cần liên hệ</small>
+            </div>
+
+          </div>
+
+
+          <div class="stat-card">
+
+            <div class="stat-icon blue">
+              <i class="fas fa-users"></i>  <!-- Thay 👥 -->
+            </div>
+
+            <div>
+              <span>Khách hàng</span>
+              <strong>24</strong>
+              <small>Đã tiếp nhận</small>
+            </div>
+
+          </div>
+
+
+          <div class="stat-card">
+
+            <div class="stat-icon purple">
+              <i class="fas fa-file-contract"></i>  <!-- Thay 📄 -->
+            </div>
+
+            <div>
+              <span>Hợp đồng</span>
+              <strong>06</strong>
+              <small>Đang thực hiện</small>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="section-card">
+
+          <div class="card-header">
+
+            <div>
+              <h3>Đơn đăng ký mới nhất</h3>
+              <p>Các yêu cầu thuê xe khách hàng vừa gửi.</p>
+            </div>
+
+            <button class="text-button" data-go="registrations">
+              Xem tất cả →
+            </button>
+
+          </div>
+
+
+          <div class="table-wrapper">
+
+            <table>
+
+              <thead>
+                <tr>
+                  <th>Mã đơn</th>
+                  <th>Khách hàng</th>
+                  <th>Loại xe</th>
+                  <th>Số lượng</th>
+                  <th>Ngày đăng ký</th>
+                  <th>Trạng thái</th>
+                </tr>
+              </thead>
+
+              <tbody id="recentRegistrationTable"></tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ================= REGISTRATIONS ================= -->
+
+      <section class="page-section" id="registrations">
+
+        <div class="page-toolbar">
+
+          <div class="search-field">
+            <i class="fas fa-search"></i>  <!-- Thay 🔍 -->
+            <input
+              type="text"
+              id="registrationSearch"
+              placeholder="Tìm mã đơn, khách hàng..."
+            >
+          </div>
+
+          <select id="registrationFilter">
+            <option value="all">Tất cả trạng thái</option>
+            <option value="pending">Chờ xử lý</option>
+            <option value="contacted">Đã liên hệ</option>
+            <option value="consulting">Đang tư vấn</option>
+            <option value="transferred">Đã chuyển quản lý</option>
+          </select>
+
+        </div>
+
+
+        <div class="section-card">
+
+          <div class="card-header">
+
+            <div>
+              <h3>Danh sách đơn đăng ký</h3>
+              <p>Các yêu cầu thuê xe do khách hàng gửi.</p>
+            </div>
+
+          </div>
+
+
+          <div class="table-wrapper">
+
+            <table>
+
+              <thead>
+                <tr>
+                  <th>Mã đơn</th>
+                  <th>Khách hàng</th>
+                  <th>Số điện thoại</th>
+                  <th>Loại xe</th>
+                  <th>Số lượng</th>
+                  <th>Ngày đăng ký</th>
+                  <th>Trạng thái</th>
+                  <th></th>
+                </tr>
+              </thead>
+
+              <tbody id="registrationTable"></tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ================= CUSTOMERS ================= -->
+
+      <section class="page-section" id="customers">
+
+        <div class="page-toolbar">
+
+          <div class="search-field">
+            <i class="fas fa-search"></i>  <!-- Thay 🔍 -->
+            <input
+              type="text"
+              id="customerSearch"
+              placeholder="Tìm khách hàng..."
+            >
+          </div>
+
+        </div>
+
+
+        <div class="section-card">
+
+          <div class="card-header">
+
+            <div>
+              <h3>Khách hàng đăng ký</h3>
+              <p>Danh sách khách hàng đã được tiếp nhận.</p>
+            </div>
+
+          </div>
+
+
+          <div class="table-wrapper">
+
+            <table>
+
+              <thead>
+                <tr>
+                  <th>Mã KH</th>
+                  <th>Khách hàng</th>
+                  <th>Số điện thoại</th>
+                  <th>Địa chỉ</th>
+                  <th>Trạng thái</th>
+                  <th></th>
+                </tr>
+              </thead>
+
+              <tbody id="customerTable"></tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ================= VEHICLES ================= -->
+
+      <section class="page-section" id="vehicles">
+
+        <div class="page-toolbar">
+
+          <div class="search-field">
+            <i class="fas fa-search"></i>  <!-- Thay 🔍 -->
+            <input
+              type="text"
+              id="vehicleSearch"
+              placeholder="Tìm tên xe, mã xe..."
+            >
+          </div>
+
+          <select id="vehicleFilter">
+
+            <option value="all">
+              Tất cả trạng thái
+            </option>
+
+            <option value="ready">
+              Sẵn sàng
+            </option>
+
+            <option value="renting">
+              Đang cho thuê
+            </option>
+
+            <option value="maintenance">
+              Bảo dưỡng
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="vehicle-grid" id="employeeVehicleGrid"></div>
+
+      </section>
+
+
+      <!-- ================= CONTRACTS ================= -->
+
+      <section class="page-section" id="contracts">
+
+        <div class="page-toolbar">
+
+          <div class="search-field">
+            <i class="fas fa-search"></i>  <!-- Thay 🔍 -->
+            <input
+              type="text"
+              id="contractSearch"
+              placeholder="Tìm mã hợp đồng, khách hàng..."
+            >
+          </div>
+
+          <button class="primary-btn" id="createContractBtn">
+            <i class="fas fa-plus"></i> Lập hợp đồng  <!-- Thêm icon plus -->
+          </button>
+
+        </div>
+
+
+        <div class="section-card">
+
+          <div class="card-header">
+
+            <div>
+              <h3>Danh sách hợp đồng</h3>
+              <p>Các hợp đồng thuê xe do nhân viên bán hàng xử lý.</p>
+            </div>
+
+          </div>
+
+
+          <div class="table-wrapper">
+
+            <table>
+
+              <thead>
+
+                <tr>
+                  <th>Mã hợp đồng</th>
+                  <th>Khách hàng</th>
+                  <th>Loại xe</th>
+                  <th>Ngày lập</th>
+                  <th>Giá trị</th>
+                  <th>Trạng thái</th>
+                  <th></th>
+                </tr>
+
+              </thead>
+
+              <tbody id="contractTable"></tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ================= ACCOUNT ================= -->
+
+      <section class="page-section" id="account">
+
+        <div class="account-layout">
+
+          <div class="section-card">
+
+            <div class="card-header">
+              <div>
+                <h3>Thông tin tài khoản</h3>
+                <p>Thông tin của tài khoản đang đăng nhập.</p>
+              </div>
+            </div>
+
+
+            <div class="profile-large">
+
+              <div class="avatar large">
+                BH
+              </div>
+
+              <div>
+                <h2>Hoàng Xuân Kiên</h2>
+                <span>Nhân viên bán hàng</span>
+              </div>
+
+            </div>
+
+
+            <div class="profile-info">
+
+              <div>
+                <label>Mã nhân viên</label>
+                <strong>NV001</strong>
+              </div>
+
+              <div>
+                <label>Tên đăng nhập</label>
+                <strong>sales</strong>
+              </div>
+
+              <div>
+                <label>Số điện thoại</label>
+                <strong>0901 234 567</strong>
+              </div>
+
+              <div>
+                <label>Email</label>
+                <strong>sales@vietanh.vn</strong>
+              </div>
+
+              <div>
+                <label>Vai trò</label>
+                <strong>Nhân viên bán hàng</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+</div>
+
+
+<!-- ================= DETAIL MODAL ================= -->
+
+<div class="modal-overlay" id="detailModal">
+
+  <div class="modal">
+
+    <button class="modal-close" data-close-modal>
+      <i class="fas fa-times"></i>  <!-- Thay × -->
+    </button>
+
+    <div id="modalContent"></div>
+
+  </div>
+
+</div>
+
+
+<!-- ================= CONTRACT MODAL ================= -->
+
+<div class="modal-overlay" id="contractModal">
+
+  <div class="modal contract-modal">
+
+    <button class="modal-close" data-close-contract>
+      <i class="fas fa-times"></i>  <!-- Thay × -->
+    </button>
+
+    <div class="modal-title">
+
+      <span class="eyebrow">
+        HỢP ĐỒNG THUÊ XE
+      </span>
+
+      <h2>Lập hợp đồng</h2>
+
+      <p>
+        Nhập thông tin để tạo hợp đồng thuê xe.
+      </p>
+
+    </div>
+
+
+    <form id="contractForm">
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label>Khách hàng</label>
+
+          <select id="contractCustomer" required>
+            <option value="">-- Chọn khách hàng --</option>
+          </select>
+
+        </div>
+
+
+        <div class="form-group">
+          <label>Loại xe</label>
+
+          <select required>
+
+            <option value="">
+              -- Chọn xe --
+            </option>
+
+            <option>
+              Máy cẩu công trình
+            </option>
+
+            <option>
+              Máy xúc đào
+            </option>
+
+            <option>
+              Xe lu
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>Ngày bắt đầu</label>
+
+          <input
+            type="date"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>Ngày kết thúc</label>
+
+          <input
+            type="date"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>Số lượng xe</label>
+
+          <input
+            type="number"
+            min="1"
+            value="1"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>Giá thuê</label>
+
+          <input
+            type="number"
+            placeholder="Nhập giá thuê"
+            required
+          >
+
+        </div>
+
+      </div>
+
+
+      <div class="contract-template">
+
+        <div>
+          <i class="fas fa-file-pdf"></i>  <!-- Thay 📄 -->
+
+          <div>
+            <strong>Mẫu hợp đồng thuê xe</strong>
+            <small>
+              Điều khoản hợp đồng được tích hợp sẵn.
+            </small>
+          </div>
+
+        </div>
+
+        <span class="template-status">
+          <i class="fas fa-check-circle"></i> Có sẵn  <!-- Thêm icon check -->
+        </span>
+
+      </div>
+
+
+      <div class="modal-actions">
+
+        <button
+          type="button"
+          class="secondary-btn"
+          data-close-contract
+        >
+          <i class="fas fa-times"></i> Hủy  <!-- Thêm icon -->
+        </button>
+
+        <button
+          type="submit"
+          class="primary-btn"
+        >
+          <i class="fas fa-check"></i> Tạo hợp đồng  <!-- Thêm icon -->
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<script src="scripts.js"></script>
+
+</body>
+</html>
