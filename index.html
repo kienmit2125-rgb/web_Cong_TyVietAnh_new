@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Việt Anh Company - Cho thuê xe công trình">
+  <title>Việt Anh Company | Cho thuê xe công trình</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+
+      <a class="brand" href="#top">
+        <img src="assets/logo.png" alt="Việt Anh Company">
+      </a>
+
+      <button class="menu-toggle" id="menuToggle">
+        ☰
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a class="active" href="#top">Trang chủ</a>
+        <a href="#vehicles">Xe cho thuê</a>
+        <a href="#services">Dịch vụ</a>
+        <a href="#about">Về chúng tôi</a>
+        <a href="#contact">Liên hệ</a>
+      </nav>
+
+      <a class="nav-cta" href="#register">
+        Đăng ký thuê xe <span>↗</span>
+      </a>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="hero-grid">
+
+        <div class="hero-copy">
+
+          <div class="eyebrow">
+            <span class="pulse"></span>
+            Sẵn sàng phục vụ công trình của bạn
+          </div>
+
+          <h1>
+            Thuê xe công trình
+            <br>
+            <span>nhanh & đúng nhu cầu.</span>
+          </h1>
+
+          <p>
+            Tìm kiếm xe phù hợp, xem giá thuê và gửi yêu cầu trực tuyến.
+            Việt Anh Company đồng hành cùng công trình của bạn bằng đội xe
+            được kiểm tra và bảo dưỡng định kỳ.
+          </p>
+
+          <div class="hero-actions">
+
+            <a class="btn btn-primary" href="#vehicles">
+              Khám phá đội xe <span>→</span>
+            </a>
+
+            <a class="btn btn-ghost" href="#register">
+              Gửi yêu cầu thuê
+            </a>
+
+          </div>
+
+          <div class="hero-stats">
+
+            <div>
+              <strong>10+</strong>
+              <span>Loại xe</span>
+            </div>
+
+            <div>
+              <strong>24/7</strong>
+              <span>Tiếp nhận yêu cầu</span>
+            </div>
+
+            <div>
+              <strong>100%</strong>
+              <span>Kiểm tra xe</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- HÌNH MINH HỌA XE -->
+        <div class="hero-visual">
+
+          <div class="visual-glow"></div>
+
+          <div class="machine-card">
+
+            <div class="machine-top">
+              <span class="tag">
+                ĐANG ĐƯỢC QUAN TÂM
+              </span>
+
+              <span class="availability">
+                <i></i>
+                Sẵn sàng
+              </span>
+            </div>
+
+
+            <div class="machine-art">
+
+      <div class="sun"></div>
+
+            <img src="assets/pic.png" alt="Xe cẩu công trình" class="machine-image">
+
+      </div>
+
+            <div class="machine-info">
+
+              <div>
+                <small>XE CÔNG TRÌNH</small>
+                <h3>Máy cẩu công trình</h3>
+              </div>
+
+              <strong>Liên hệ</strong>
+
+            </div>
+
+          </div>
+
+
+          <div class="floating-note note-one">
+            <span>✓</span>
+            Xe được kiểm tra trước khi bàn giao
+          </div>
+
+          <div class="floating-note note-two">
+            <span>↗</span>
+            Đăng ký thuê trực tuyến
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TÌM KIẾM -->
+    <section class="search-panel">
+
+      <div class="container">
+
+        <div class="search-box">
+
+          <div class="search-heading">
+
+            <span class="search-icon">⌕</span>
+
+            <div>
+              <strong>
+                Tìm xe phù hợp với công trình
+              </strong>
+
+              <small>
+                Chọn loại xe hoặc tìm kiếm theo tên xe
+              </small>
+            </div>
+
+          </div>
+
+
+          <div class="search-controls">
+
+            <select id="vehicleType">
+
+              <option value="all">
+                Tất cả loại xe
+              </option>
+
+              <option value="excavator">
+                Máy xúc
+              </option>
+
+              <option value="roller">
+                Xe lu
+              </option>
+
+              <option value="bulldozer">
+                Xe ủi
+              </option>
+
+              <option value="truck">
+                Xe tải
+              </option>
+              
+              <option value="crane">
+                Xe cẩu
+              </option>
+
+            </select>
+
+
+            <input
+              id="vehicleSearch"
+              type="search"
+              placeholder="Ví dụ: máy xúc, xe lu..."
+            >
+
+
+            <button class="btn btn-dark" id="searchBtn">
+              Tìm kiếm <span>→</span>
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- XE -->
+    <section class="section vehicles-section" id="vehicles">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <div>
+
+            <div class="section-kicker">
+              ĐỘI XE CÔNG TRÌNH
+            </div>
+
+            <h2>
+              Những chiếc xe sẵn sàng
+              <br>
+              cho công việc của bạn.
+            </h2>
+
+          </div>
+
+          <a class="text-link" href="#vehicles">
+            Xem tất cả <span>→</span>
+          </a>
+
+        </div>
+
+
+        <div class="vehicle-grid" id="vehicleGrid">
+
+
+          <!-- XE 1 -->
+        <article
+          class="vehicle-card"
+          data-type="excavator"
+          data-name="Máy cẩu công trình"
+>
+
+      <div class="vehicle-image excavator-bg">
+
+        <span class="vehicle-status ready">
+            <i></i>
+            Sẵn sàng
+            </span>
+
+        <img
+        src="assets/pic.png"
+        alt="Máy cẩu công trình"
+        class="vehicle-photo"
+      >
+
+      <span class="vehicle-code">
+      VA-EX01
+      </span>
+
+    </div>
+
+    <div class="vehicle-content">
+
+          <div class="vehicle-meta">
+        MÁY CẨU · 25 TẤN
+          </div>
+
+          <h3>
+          Máy cẩu công trình
+          </h3>
+
+    <p>
+      Chuyên nâng hạ tải trọng lớn, lắp ráp cấu kiện và bốc xếp vật liệu xây dựng.
+    </p>
+
+    <div class="vehicle-bottom">
+
+      <span>
+        Giá thuê
+        <b>Liên hệ</b>
+      </span>
+
+      <button class="detail-btn">
+        Chi tiết →
+      </button>
+
+          </div>
+
+      </div>
+
+  </article>
+
+
+          <!-- XE 2 -->
+          <article
+            class="vehicle-card"
+            data-type="roller"
+            data-name="Xe lu rung"
+          >
+
+            <div class="vehicle-image roller-bg">
+
+              <span class="vehicle-status ready">
+                <i></i>
+                Sẵn sàng
+              </span>
+
+              <img
+        src="assets/pic2.png"
+        alt="Máy cẩu công trình"
+        class="vehicle-photo"
+      >
+
+              <span class="vehicle-code">
+                VA-RL02
+              </span>
+
+            </div>
+
+
+            <div class="vehicle-content">
+
+              <div class="vehicle-meta">
+                XE LU · RUNG
+              </div>
+
+              <h3>
+                Xe lu rung
+              </h3>
+
+              <p>
+                Hỗ trợ lu nền, lu đường và hoàn thiện mặt bằng.
+              </p>
+
+
+              <div class="vehicle-bottom">
+
+                <span>
+                  Giá thuê
+                  <b>Liên hệ</b>
+                </span>
+
+                <button class="detail-btn">
+                  Chi tiết →
+                </button>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- XE 3 -->
+          <article
+            class="vehicle-card"
+            data-type="bulldozer"
+            data-name="Máy ủi công trình"
+          >
+
+            <div class="vehicle-image bulldozer-bg">
+
+              <span class="vehicle-status renting">
+                <i></i>
+                Đang cho thuê
+              </span>
+
+             <img
+        src="assets/pic3.png"
+        alt="Máy cẩu công trình"
+        class="vehicle-photo"
+      >
+
+              <span class="vehicle-code">
+                VA-BD03
+              </span>
+
+            </div>
+
+
+            <div class="vehicle-content">
+
+              <div class="vehicle-meta">
+                MÁY ỦI · CÔNG TRÌNH
+              </div>
+
+              <h3>
+                Máy ủi công trình
+              </h3>
+
+              <p>
+                Phù hợp san gạt, tạo mặt bằng và xử lý đất đá.
+              </p>
+
+
+              <div class="vehicle-bottom">
+
+                <span>
+                  Giá thuê
+                  <b>Liên hệ</b>
+                </span>
+
+                <button class="detail-btn">
+                  Chi tiết →
+                </button>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <div class="empty-state" id="emptyState">
+
+          <strong>
+            Không tìm thấy xe phù hợp.
+          </strong>
+
+          <span>
+            Thử thay đổi từ khóa hoặc loại xe.
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- DỊCH VỤ -->
+    <section class="service-section section" id="services">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <div>
+
+            <div class="section-kicker">
+              DỊCH VỤ
+            </div>
+
+            <h2>
+              Không chỉ cho thuê xe.
+            </h2>
+
+          </div>
+
+          <p class="section-description">
+            Chúng tôi quản lý cả quá trình từ tư vấn,
+            điều phối đến theo dõi và bảo dưỡng phương tiện.
+          </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+
+          <div class="service-card featured">
+
+            <span class="service-number">
+              01
+            </span>
+
+            <div class="service-icon">
+              ▰
+            </div>
+
+            <h3>
+              Cho thuê xe công trình
+            </h3>
+
+            <p>
+              Cung cấp xe theo nhu cầu, số lượng và
+              thời gian thực hiện của từng công trình.
+            </p>
+
+            <a href="#register">
+              Đăng ký thuê <span>→</span>
+            </a>
+
+          </div>
+
+
+          <div class="service-card">
+
+            <span class="service-number">
+              02
+            </span>
+
+            <div class="service-icon">
+              ⚙
+            </div>
+
+            <h3>
+              Bảo dưỡng & kiểm tra
+            </h3>
+
+            <p>
+              Xe được theo dõi tình trạng và bảo dưỡng
+              định kỳ trước khi tiếp tục đưa vào hoạt động.
+            </p>
+
+          </div>
+
+
+          <div class="service-card">
+
+            <span class="service-number">
+              03
+            </span>
+
+            <div class="service-icon">
+              ⌁
+            </div>
+
+            <h3>
+              Điều phối công trình
+            </h3>
+
+            <p>
+              Theo dõi thời gian, địa điểm và quá trình
+              thực hiện theo từng hợp đồng thuê xe.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- GIỚI THIỆU -->
+    <section class="about-section section" id="about">
+
+      <div class="container about-grid">
+
+        <div class="about-visual">
+
+          <div class="about-ring"></div>
+
+          <div class="about-logo-wrap">
+            <img
+              src="assets/logo.png"
+              alt="Logo Việt Anh Company"
+            >
+          </div>
+
+          <div class="about-badge">
+            <strong>VIỆT ANH</strong>
+            <span>Đồng hành cùng công trình</span>
+          </div>
+
+        </div>
+
+
+        <div class="about-copy">
+
+          <div class="section-kicker">
+            VỀ VIỆT ANH COMPANY
+          </div>
+
+          <h2>
+            Đội xe tốt.
+            <br>
+            Quy trình rõ ràng.
+          </h2>
+
+          <p>
+            Việt Anh Company cung cấp dịch vụ cho thuê
+            các loại xe công trình, phục vụ nhu cầu thi công
+            theo từng dự án và thời gian cụ thể.
+          </p>
+
+          <p>
+            Khách hàng có thể xem thông tin xe, lựa chọn
+            phương tiện phù hợp và gửi yêu cầu thuê trực tuyến.
+            Đội ngũ công ty tiếp nhận, tư vấn và xử lý yêu cầu
+            theo quy trình.
+          </p>
+
+
+          <div class="about-points">
+
+            <span>✓ Thông tin xe rõ ràng</span>
+            <span>✓ Theo dõi tình trạng xe</span>
+            <span>✓ Hỗ trợ tư vấn nhu cầu</span>
+            <span>✓ Bảo dưỡng định kỳ</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ĐĂNG KÝ -->
+    <section class="register-section" id="register">
+
+      <div class="container">
+
+        <div class="register-card">
+
+          <div>
+
+            <div class="section-kicker light">
+              BẠN ĐANG CÓ NHU CẦU?
+            </div>
+
+            <h2>
+              Gửi yêu cầu thuê xe
+              <br>
+              trong vài phút.
+            </h2>
+
+            <p>
+              Điền thông tin cơ bản. Nhân viên Việt Anh Company
+              sẽ liên hệ để tư vấn và xác nhận nhu cầu thuê.
+            </p>
+
+          </div>
+
+
+          <a
+            class="btn btn-yellow"
+            href="javascript:void(0)"
+            id="registerBtn"
+          >
+            Đăng ký thuê xe <span>→</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer id="contact">
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        
+
+        <p>
+          Cho thuê và bảo dưỡng các loại xe công trình.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>Khách hàng</h4>
+
+        <a href="#vehicles">
+          Xem xe
+        </a>
+
+        <a href="#register">
+          Đăng ký thuê xe
+        </a>
+
+        <a href="#services">
+          Dịch vụ
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h4>Liên hệ</h4>
+
+        <span>
+          Hotline: 0xxx xxx xxx
+        </span>
+
+        <span>
+          Email: lienhe@vietanhcompany.vn
+        </span>
+
+        <span>
+          Địa chỉ: Việt Nam
+        </span>
+
+      </div>
+
+
+      <div>
+
+        <h4>Việt Anh Company</h4>
+
+        <span>
+          Quản lý cho thuê & bảo dưỡng xe công trình
+        </span>
+
+        <a href="#top">
+          Về đầu trang ↑
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <div class="container">
+        © 2026 Việt Anh Company. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- MODAL ĐĂNG KÝ -->
+  <div
+    class="modal"
+    id="registerModal"
+    aria-hidden="true"
+  >
+
+    <div
+      class="modal-backdrop"
+      id="modalBackdrop"
+    ></div>
+
+
+    <div class="modal-box">
+
+      <button
+        class="modal-close"
+        id="modalClose"
+      >
+        ×
+      </button>
+
+
+      <div class="section-kicker">
+        ĐĂNG KÝ THUÊ XE
+      </div>
+
+      <h2>
+        Gửi yêu cầu thuê xe
+      </h2>
+
+      <p class="modal-sub">
+        Thông tin của bạn sẽ được nhân viên tiếp nhận để tư vấn.
+      </p>
+
+
+      <form id="registerForm">
+
+        <label>
+          Họ tên / Tên doanh nghiệp
+
+          <input
+            required
+            name="customer"
+            placeholder="Nhập họ tên hoặc tên doanh nghiệp"
+          >
+        </label>
+
+
+        <label>
+          Số điện thoại
+
+          <input
+            required
+            name="phone"
+            type="tel"
+            placeholder="Nhập số điện thoại"
+          >
+        </label>
+
+
+        <div class="form-row">
+
+          <label>
+            Loại xe
+
+            <select required name="type">
+
+              <option value="">
+                Chọn loại xe
+              </option>
+
+              <option>
+                Máy xúc
+              </option>
+
+              <option>
+                Xe lu
+              </option>
+
+              <option>
+                Máy ủi
+              </option>
+
+              <option>
+                Xe tải
+              </option>
+
+              <option>
+                Xe cẩu
+              </option>
+
+            </select>
+
+          </label>
+
+
+          <label>
+            Số lượng
+
+            <input
+              required
+              name="quantity"
+              type="number"
+              min="1"
+              placeholder="1"
+            >
+
+          </label>
+
+        </div>
+
+
+        <div class="form-row">
+
+          <label>
+            Thời gian thuê
+
+            <input
+              required
+              name="date"
+              type="date"
+            >
+
+          </label>
+
+
+          <label>
+            Địa điểm sử dụng
+
+            <input
+              required
+              name="location"
+              placeholder="Địa điểm công trình"
+            >
+
+          </label>
+
+        </div>
+
+
+        <label>
+          Ghi chú
+
+          <textarea
+            name="note"
+            rows="3"
+            placeholder="Yêu cầu thêm về xe hoặc công việc..."
+          ></textarea>
+
+        </label>
+
+
+        <button
+          class="btn btn-primary full"
+          type="submit"
+        >
+          Gửi yêu cầu đăng ký <span>→</span>
+        </button>
+
+      </form>
+
+
+      <div
+        class="success-message"
+        id="successMessage"
+      >
+
+        <div class="success-icon">
+          ✓
+        </div>
+
+        <strong>
+          Đã tiếp nhận yêu cầu!
+        </strong>
+
+        <span>
+          Nhân viên Việt Anh Company sẽ liên hệ với bạn sớm.
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="scripts.js"></script>
+
+</body>
+</html>
